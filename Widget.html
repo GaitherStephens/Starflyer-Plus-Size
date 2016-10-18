@@ -1,0 +1,452 @@
+<!-- Starflyer by SPQRGuyMontag    -->
+<!-- Credit to Matchstic and JunesIphone -->
+<html>
+ <head>
+	<title>Starflyer</title>
+	<style type="text/css">
+  @font-face {
+    font-family:"roboto-regular";
+    src: url(fonts/roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family:"roboto-thin";
+    src: url(fonts/roboto/Roboto-Thin.ttf);
+  }
+	*{
+	  margin: 0;
+	  padding: 0;
+	}
+
+  #mainTime{
+    position: relative;
+    top: 40px;
+    right: 160px;
+    font-family: 'roboto-thin';
+    text-align: right;
+    color: white;
+    font-size: 80px;
+  }
+
+  #mainDate{
+    position: relative;
+    top: -40px;
+    left: 270px;
+    font-family: 'roboto-thin';
+    font-weight: 600;
+    text-align: left;
+    color: white;
+    font-size: 22px;
+  }
+
+  #mainBolt{
+    position: relative;
+    top: -28px;
+    left: 270px;
+  }
+
+  #mainBattery{
+    position: relative;
+    top: -50px;
+    left: 290px;
+    font-family: 'roboto-thin';
+    font-weight: 600;
+    text-align: left;
+    color: white;
+    font-size: 22px;
+  }
+
+  #eventsContainer {
+    width: 90%;
+    height: 360px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+	.event {
+	  margin: 2;
+	  height: 50px;
+	  opacity: 0.8;
+	}
+
+	p {
+	  overflow: hidden;
+	  white-space: nowrap;
+    font-family: 'roboto-regular';
+	}
+
+	.colour {
+	  height: 25px;
+	  width: 3px;
+	  position: relative;
+	  left: 15px;
+	  top: 10px;
+	  background-color: #00FF00;
+	  float: left;
+	}
+
+	.label {
+	  height: 30px;
+	  width: 90%;
+	  font-size: 15;
+	  color: #a8d7ff;
+	  position: relative;
+	  left: 10px;
+	  top: -2;
+	  float: right;
+	}
+	.labelmargin {
+	  margin: 2;
+	  height: 30px;
+	}
+	.title {
+	  height: 20px;
+	  width: 90%;
+	  font-size: 15;
+	  font-weight: 100;
+    color: white;
+	  position: relative;
+	  left: 10px;
+	  top: 6;
+	  float: right;
+	}
+
+	.time {
+	  height: 15px;
+	  width: 90%;
+	  font-size: 11;
+	  font-weight: 100;
+    color: white;
+	  position: relative;
+	  left: 10px;
+	  top: 5;
+	  float: right;
+	}
+
+  #weatherIcon {
+    position: relative;
+    top: 430px;
+    left: 170px;
+  }
+
+  #weatherTemp {
+    position: relative;
+    top: 420px;
+    left: 190px;
+    font-family: 'roboto-thin';
+    color: white;
+    font-size: 30px;
+  }
+
+	body {
+	   background-image: url("images/starflyer.jpg");
+     background-repeat: no-repeat;
+     background-size: 414px 736px;
+	}
+
+	</style>
+</head>
+<script type="text/javascript" src="js/lang.js"></script>
+<body>
+    <div id="mainTime">23:56</div>
+    <div id="mainDate">Nov 27</div>
+    <div id="mainBolt"><img id ="bolt" src="images/boltNC.svg" height="20px"></div>
+    <div id="mainBattery">76%</div>
+		<div id="eventscontainer">
+
+      <div id="agendaLabel" class="labelmargin">
+    	  <p class="label">WEEK AGENDA</p>
+        </div>
+        <div id="eventOne" class="event">
+          <p id="eventOneColour" class="colour"> </p>
+          <p id="eventOneTitle" class="title">Lorem Ipsum</p>
+          <p id="eventOneTime" class="time">11:40, Today</p>
+        </div>
+
+        <div id="eventTwo" class="event">
+          <p id="eventTwoColour" class="colour"> </p>
+          <p id="eventTwoTitle" class="title">Lorem Ipsum</p>
+          <p id="eventTwoTime" class="time">11:40, Today</p>
+        </div>
+
+        <div id="eventThree" class="event">
+          <p id="eventThreeColour" class="colour"> </p>
+          <p id="eventThreeTitle" class="title">Lorem Ipsum</p>
+          <p id="eventThreeTime" class="time">11:40, Today</p>
+        </div>
+
+        <div id="eventFour" class="event">
+          <p id="eventFourColour" class="colour"> </p>
+          <p id="eventFourTitle" class="title">Lorem Ipsum</p>
+          <p id="eventFourTime" class="time">11:40, Today</p>
+        </div>
+
+        <div id="eventFive" class="event">
+          <p id="eventFiveColour" class="colour"> </p>
+          <p id="eventFiveTitle" class="title">Lorem Ipsum</p>
+          <p id="eventFiveTime" class="time">11:40, Today</p>
+        </div>
+
+    	  <div id="eventSix" class="event">
+          <p id="eventSixColour" class="colour"> </p>
+          <p id="eventSixTitle" class="title">Lorem Ipsum</p>
+          <p id="eventSixTime" class="time">11:40, Today</p>
+        </div>
+        <div id="noevents">
+         <center><p>No Events</p></center>
+        </div>
+      </div>
+      <div id="weatherIcon"><img id="wxicon" src="images/wx/32.svg" height="75px"></div>
+      <div id="weatherTemp">75&deg</div>
+      <script type="text/cycript">
+      //<![CDATA[
+      // Used by InfoStats 2 to uniquely identify your widget.
+      var widgetIdentifier = "com.gaitherstephens.starflyer";
+      var twentyfourhour = twentyfourhourOp;
+      var wxRefresh = wxRefreshOp;
+      var ampm;
+
+      // gets date info
+      var now = new Date();
+      var today = now.toDateString();
+      var time = now.toLocaleTimeString();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var milliseconds = now.getMilliseconds();
+      var newSeconds = seconds+ (milliseconds/1000);
+
+
+      // adds zero to number if single digit
+      function timeValueCorrection(tc) {
+      		if (tc < 10) {
+      					return "0" + tc;
+      		} else {
+      					return tc;
+      		}
+      }
+
+      function convertHours(h){
+      	if(twentyfourhour){
+      		return h;
+      	}else{
+      		return ((h + 11) % 12 + 1);
+      	}
+      }
+
+      //updates time and populates elements
+      function updateWidget(){
+      	now = new Date();
+      	today = now.toDateString();
+      	time = now.toLocaleTimeString();
+      	hours = now.getHours();
+      	minutes = now.getMinutes();
+      	seconds = now.getSeconds();
+      	milliseconds = now.getMilliseconds();
+      	newSeconds = seconds+ (milliseconds/1000);
+      	document.getElementById('mainTime').innerHTML = convertHours(hours) + ":" + timeValueCorrection(minutes);
+      	document.getElementById('mainDate').innerHTML = translate[current].smonth[now.getMonth()] + " " + now.getDate();
+        if([IS2System batteryStateAsInteger] === 1){
+          document.getElementById("bolt").src = "images/boltNC.svg";
+        }else{
+          document.getElementById("bolt").src = "images/boltC.svg";
+        }
+        setTimeout(updateWidget, 1000);
+      }
+      updateWidget();
+
+      function hideAllAvailableEvents() {
+        for (i = 0; i < 6; i++) {
+          document.getElementById(elementIdForNumber(i) + 'Title').innerHTML = "";
+          document.getElementById(elementIdForNumber(i) + 'Colour').style.backgroundColor = "transparent";
+          document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = "";
+        }
+      }
+
+      function elementIdForNumber(x) {
+        switch (x) {
+          case 0:
+            return "eventOne";
+          case 1:
+            return "eventTwo";
+          case 2:
+            return "eventThree";
+          case 3:
+            return "eventFour";
+          case 4:
+            return "eventFive";
+        case 5:
+            return "eventSix";
+          default:
+            return "";
+        }
+      }
+
+      function timeValueCorrection(value) {
+         if (value < 10) {
+              return "0" + value;
+         } else {
+              return value;
+         }
+      }
+
+      function timeToDayName(time) {
+          var dayNumber = time.getDay();
+          var today = new Date();
+          var tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+
+          if (dayNumber == today.getDay()) {
+                return "Today";
+          } else if (dayNumber == tomorrow.getDay()) {
+                return "Tomorrow";
+          }
+
+          switch(dayNumber) {
+              case 0:
+                return "Sunday";
+              case 1:
+                return "Monday";
+              case 2:
+                return "Tuesday";
+              case 3:
+                return "Wednesday";
+              case 4:
+                return "Thursday";
+              case 5:
+                return "Friday";
+              case 6:
+                return "Saturday";
+              default:
+                return "";
+            }
+      }
+        function timerFiredEventDidEnd() {
+          updateCalendarData();
+
+          // The above will also handle resetting the timer for an event's end.
+      }
+
+      function formatHours(hours) {
+        if(hours >= 12){
+        ampm = "p";
+        }else{
+        ampm = "a";
+          }
+        hours = (hours + 11) % 12 + 1;
+        return hours;
+          // The above will also handle resetting the timer for an event's end.
+      }
+
+      function updateCalendarData() {
+        // First, grab the data between right now and in 7 days' time.
+        var timeNow = new Date();
+        var timeInWeek = timeNow.getTime() + (7 * 24 * 60 * 60 * 1000);
+
+        var firstEndTime = 0;
+
+      var eventsArray = JSON.parse("" + [IS2Calendar calendarEntriesJSONBetweenStartTimeAsTimestamp:timeNow.getTime() andEndTimeAsTimestamp:timeInWeek]);
+
+        if (eventsArray.length > 0) {
+              document.getElementById('noevents').style.display = "none";
+              document.getElementById('eventscontainer').style.display = "inline";
+
+              // Initially, hide all the available events we can show.
+              hideAllAvailableEvents();
+
+              // Go over events available.
+              for (i = 0; i < eventsArray.length; i++) {
+                var event = eventsArray[i];
+
+                // Update title
+                document.getElementById(elementIdForNumber(i) + 'Title').innerHTML = event.title;
+
+                // Also, update the colour to display.
+                document.getElementById(elementIdForNumber(i) + 'Colour').style.backgroundColor = event.associatedCalendarHexColor;
+
+                if (event.allDay == 0) {
+                    // Work out date display.
+                    var timeStart = new Date(event.startTimeTimestamp);
+                    var timeEnd = new Date(event.endTimeTimestamp);
+
+                    if (timeStart.getDay() == timeEnd.getDay()) {
+                        // Event is all on the same day, huzzah.
+                        var timeString = "" + timeToDayName(timeStart) + ": " + formatHours(timeStart.getHours()) + ":" + timeValueCorrection(timeStart.getMinutes()) + ampm;
+                        timeString += " to " + formatHours(timeEnd.getHours()) + ":" + timeValueCorrection(timeEnd.getMinutes()) + ampm;
+
+                        document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = timeString;
+                    } else {
+                          // Event goes over multiple days...
+                          var timeString = "" + timeToDayName(timeStart) + ", " + formatHours(timeStart.getHours()) + ":" + timeValueCorrection(timeStart.getMinutes()) + ampm;
+                          timeString += " to " + timeToDayName(timeEnd) + ", " + formatHours(timeEnd.getHours()) + ":" + timeValueCorrection(timeEnd.getMinutes()) + ampm;
+                          document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = timeString;
+                    }
+                } else {
+                    var timeStart = new Date(event.startTimeTimestamp);
+                    document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = timeToDayName(timeStart) + ": all day";
+                }
+
+                // handle end times for timer.
+                if (firstEndTime == 0 || event.endTimeTimestamp < firstEndTime) {
+                  firstEndTime = event.endTimeTimestamp;
+                }
+
+                if (i == 5) {
+                  // Can't display more than 6 upcoming events!
+                  break;
+                }
+              }
+
+         } else {
+              // Just display that there's no events.
+               document.getElementById('noevents').style.display = "inline";
+               document.getElementById('eventscontainer').style.display = "none";
+         }
+
+          // Also, ensure we refresh when the first end time is reached of events.
+          // Setting timeout is in milliseconds, and both timeNow and firstEndTime are too.
+
+          if (firstEndTime == 0) {
+            // Setup a time for the next midnight instead.
+             timeNow.setDate(timeNow.getDate()+1);
+             firstEndTime = timeNow.getTime();
+          }
+
+          setTimeout(timerFiredEventDidEnd, firstEndTime - timeNow);
+      }
+
+      function updateWx(){
+        document.getElementById("wxicon").src = "images/wx/" + [IS2Weather currentCondition] + ".svg";
+        document.getElementById("weatherTemp").innerHTML = [IS2Weather currentTemperature] + "&deg";
+      }
+
+      window.onload = function(){
+        [IS2Weather registerForWeatherUpdatesWithIdentifier:widgetIdentifier andCallback:^ void () {
+            updateWx();
+        }];
+        [IS2Weather setWeatherUpdateTimeInterval:wxRefresh forRequester:widgetIdentifier];
+        updateWx();
+
+        // Code to run after calendar data updates.
+        [IS2Calendar registerForCalendarNotificationsWithIdentifier:widgetIdentifier andCallback:^ void () {
+          // Update onscreen elements
+          updateCalendarData();
+        }];
+
+        // Populate initial data fields.
+        updateCalendarData();
+      }
+
+      // Make sure to de-register ourselves.
+      window.onunload = function() {
+        [IS2Weather unregisterForUpdatesWithIdentifier:widgetIdentifier];
+        [IS2Weather removeRequesterForWeatherTimeInterval:widgetIdentifier];
+        [IS2Calendar unregisterForNotificationsWithIdentifier:widgetIdentifier];
+       return null;
+      };
+      //]]>
+    </script>
+  </body>
+</html>
