@@ -206,8 +206,13 @@
       // Used by InfoStats 2 to uniquely identify your widget.
       var widgetIdentifier = "com.gaitherstephens.starflyer";
       var twentyfourhour = twentyfourhourOp;
+      var useBg = useBgOp;
       var wxRefresh = wxRefreshOp;
       var ampm;
+
+      if(!useBg){
+        document.body.style.background = "none";
+      }
 
       // gets date info
       var now = new Date();
