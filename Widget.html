@@ -254,6 +254,7 @@
         }else{
           document.getElementById("bolt").src = "images/boltC.svg";
         }
+        document.getElementById("mainBattery").innerHTML = [IS2System batteryPercent] + "%";
         setTimeout(updateWidget, 1000);
       }
       updateWidget();
